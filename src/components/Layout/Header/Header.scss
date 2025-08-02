@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+
+.header {
+  height: 70px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 var(--space-lg);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-dropdown);
+  
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  &__search {
+    flex: 1;
+    max-width: 500px;
+    margin-right: var(--space-lg);
+  }
+  
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+}
+
+.search-placeholder,
+.user-actions-placeholder {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}

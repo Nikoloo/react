@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-primary);
+  overflow: hidden;
+
+  &__main {
+    display: flex;
+    flex: 1;
+    min-height: 0; // Prevents flex item from growing beyond container
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: var(--space-lg);
+    transition: margin-left var(--transition-medium);
+    
+    &.with-sidebar {
+      margin-left: 280px; // Sidebar width
+    }
+    
+    // Mobile responsive
+    @media (max-width: 768px) {
+      padding: var(--space-md);
+      
+      &.with-sidebar {
+        margin-left: 0; // Sidebar becomes overlay on mobile
+      }
+    }
+    
+    // Custom scrollbar for content area
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--text-tertiary);
+      border-radius: var(--radius-full);
+      
+      &:hover {
+        background: var(--text-secondary);
+      }
+    }
+  }
+}
+
+// Animation for layout changes
+.app-layout__content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+// Dark theme optimizations
+[data-theme="dark"] {
+  .app-layout {
+    background: var(--bg-primary);
+  }
+}
+
+// Light theme optimizations
+[data-theme="light"] {
+  .app-layout {
+    background: var(--bg-primary);
+    
+    &__content {
+      &::-webkit-scrollbar-thumb {
+        background: var(--text-tertiary);
+      }
+    }
+  }
+}
+
+// Performance optimizations
+.app-layout {
+  // Use GPU acceleration for smooth scrolling
+  transform: translateZ(0);
+  
+  &__content {
+    // Optimize scrolling performance
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+  }
+}

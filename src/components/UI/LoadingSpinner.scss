@@ -1,0 +1,191 @@
+@import '../../styles/variables.scss';
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  
+  &__fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: var(--z-modal);
+  }
+  
+  &__circle {
+    position: relative;
+    display: inline-block;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+  }
+  
+  &__path {
+    border-radius: var(--radius-full);
+    animation: loading-spin 1.2s linear infinite;
+  }
+  
+  &__text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  // Size variants
+  &--small {
+    .loading-spinner__circle {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .loading-spinner__path {
+      width: 20px;
+      height: 20px;
+      border: 2px solid transparent;
+      border-top: 2px solid;
+    }
+    
+    .loading-spinner__text {
+      font-size: var(--font-size-xs);
+    }
+  }
+  
+  &--medium {
+    .loading-spinner__circle {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .loading-spinner__path {
+      width: 32px;
+      height: 32px;
+      border: 3px solid transparent;
+      border-top: 3px solid;
+    }
+  }
+  
+  &--large {
+    .loading-spinner__circle {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .loading-spinner__path {
+      width: 48px;
+      height: 48px;
+      border: 4px solid transparent;
+      border-top: 4px solid;
+    }
+    
+    .loading-spinner__text {
+      font-size: var(--font-size-lg);
+    }
+  }
+  
+  // Color variants
+  &--primary {
+    .loading-spinner__path {
+      border-top-color: var(--spotify-green);
+    }
+  }
+  
+  &--secondary {
+    .loading-spinner__path {
+      border-top-color: var(--text-secondary);
+    }
+  }
+  
+  &--white {
+    .loading-spinner__path {
+      border-top-color: var(--text-primary);
+    }
+    
+    .loading-spinner__text {
+      color: var(--text-primary);
+    }
+  }
+}
+
+// Premium loading animation with glow effect
+.loading-spinner--primary {
+  .loading-spinner__circle {
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(45deg, var(--spotify-green), transparent, var(--spotify-green));
+      animation: loading-glow 2s ease-in-out infinite;
+      z-index: -1;
+      opacity: 0.6;
+      filter: blur(4px);
+    }
+  }
+}
+
+// Animations
+@keyframes loading-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+// Pulse effect for text
+.loading-spinner__text {
+  animation: loading-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner__path {
+    animation: none;
+    border-top-color: transparent;
+    border-color: var(--spotify-green);
+  }
+  
+  .loading-spinner__circle::before {
+    animation: none;
+    opacity: 0.3;
+  }
+  
+  .loading-spinner__text {
+    animation: none;
+    opacity: 1;
+  }
+}

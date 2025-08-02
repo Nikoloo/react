@@ -1,0 +1,224 @@
+@import '../../styles/variables.scss';
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  &__container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    padding: var(--space-xl);
+  }
+  
+  &__content {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  &__header {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  &__logo {
+    color: var(--spotify-green);
+    margin-bottom: var(--space-lg);
+    animation: pulse 2s infinite;
+  }
+  
+  &__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+  }
+  
+  &__subtitle {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+  }
+  
+  &__form {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  &__divider {
+    position: relative;
+    margin: var(--space-xl) 0;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--glass-border);
+    }
+    
+    span {
+      background: var(--glass-bg);
+      padding: 0 var(--space-md);
+      color: var(--text-tertiary);
+      font-size: var(--font-size-sm);
+      position: relative;
+    }
+  }
+  
+  &__demo-button {
+    width: 100%;
+    padding: var(--space-md) var(--space-xl);
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    
+    &:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      border-color: var(--text-tertiary);
+    }
+  }
+  
+  &__features {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+  
+  &__footer {
+    p {
+      font-size: var(--font-size-xs);
+      color: var(--text-tertiary);
+      line-height: 1.5;
+    }
+  }
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  
+  &__icon {
+    font-size: var(--font-size-lg);
+  }
+  
+  &__text {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+}
+
+.background-circle {
+  position: absolute;
+  border-radius: var(--radius-full);
+  background: linear-gradient(45deg, var(--spotify-green-glow), transparent);
+  animation: float 6s ease-in-out infinite;
+  
+  &--1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: -50px;
+    animation-delay: 0s;
+  }
+  
+  &--2 {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    right: -100px;
+    animation-delay: 2s;
+  }
+  
+  &--3 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 10%;
+    animation-delay: 4s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+// Mobile responsive
+@media (max-width: 480px) {
+  .login-page {
+    &__container {
+      padding: var(--space-md);
+    }
+    
+    &__content {
+      padding: var(--space-xl);
+    }
+    
+    &__features {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+  }
+  
+  .background-circle {
+    &--1, &--2, &--3 {
+      display: none; // Hide decorative elements on mobile
+    }
+  }
+}

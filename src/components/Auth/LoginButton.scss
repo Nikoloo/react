@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--spotify-green);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    background: var(--spotify-green-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--spotify-green-light);
+    outline-offset: 2px;
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  
+  // Premium hover effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left var(--transition-medium);
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+  
+  // Loading state
+  &--loading {
+    pointer-events: none;
+    
+    .login-button__icon {
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive
+@media (max-width: 480px) {
+  .login-button {
+    width: 100%;
+    min-width: unset;
+    padding: var(--space-lg) var(--space-xl);
+  }
+}

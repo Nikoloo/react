@@ -64,7 +64,7 @@ export const apiSlice = createApi({
     
     // Library endpoints
     getLikedTracks: builder.query({
-      query: ({ limit = 50, offset = 0 } = {}) => 
+      query: ({ limit = 50, offset = 0 }: { limit?: number; offset?: number } = {}) => 
         `/me/tracks?limit=${limit}&offset=${offset}`,
       providesTags: ['Track'],
     }),

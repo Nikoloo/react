@@ -5,6 +5,7 @@ import { UIState } from '../../types';
 const initialState: UIState = {
   isLibraryCollapsed: false,
   currentTheme: 'dark',
+  theme: 'dark',
   isPlaying: false,
   volume: 0.5,
   isShuffled: false,
@@ -27,10 +28,12 @@ const uiSlice = createSlice({
     
     toggleTheme: (state) => {
       state.currentTheme = state.currentTheme === 'dark' ? 'light' : 'dark';
+      state.theme = state.currentTheme;
     },
     
     setTheme: (state, action: PayloadAction<'dark' | 'light'>) => {
       state.currentTheme = action.payload;
+      state.theme = action.payload;
     },
     
     setVolume: (state, action: PayloadAction<number>) => {
@@ -71,6 +74,7 @@ const uiSlice = createSlice({
     setSystemTheme: (state) => {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       state.currentTheme = prefersDark ? 'dark' : 'light';
+      state.theme = state.currentTheme;
     },
   },
 });

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/spotify-webapp/static/css/main.d25b37f8.css",
+    "main.js": "/spotify-webapp/static/js/main.7b10e874.js",
+    "static/css/570.3bd6244a.chunk.css": "/spotify-webapp/static/css/570.3bd6244a.chunk.css",
+    "static/js/570.5d21b4f3.chunk.js": "/spotify-webapp/static/js/570.5d21b4f3.chunk.js",
+    "static/js/327.68bc082b.chunk.js": "/spotify-webapp/static/js/327.68bc082b.chunk.js",
+    "static/js/485.3a1e80be.chunk.js": "/spotify-webapp/static/js/485.3a1e80be.chunk.js",
+    "static/js/791.6e065e91.chunk.js": "/spotify-webapp/static/js/791.6e065e91.chunk.js",
+    "static/js/415.e4b996d5.chunk.js": "/spotify-webapp/static/js/415.e4b996d5.chunk.js",
+    "static/js/695.632db14d.chunk.js": "/spotify-webapp/static/js/695.632db14d.chunk.js",
+    "static/js/602.f5bb271a.chunk.js": "/spotify-webapp/static/js/602.f5bb271a.chunk.js",
+    "static/css/437.a6343b85.chunk.css": "/spotify-webapp/static/css/437.a6343b85.chunk.css",
+    "static/js/437.a7871601.chunk.js": "/spotify-webapp/static/js/437.a7871601.chunk.js",
+    "static/js/594.b7348de9.chunk.js": "/spotify-webapp/static/js/594.b7348de9.chunk.js",
+    "index.html": "/spotify-webapp/index.html",
+    "main.d25b37f8.css.map": "/spotify-webapp/static/css/main.d25b37f8.css.map",
+    "main.7b10e874.js.map": "/spotify-webapp/static/js/main.7b10e874.js.map",
+    "570.3bd6244a.chunk.css.map": "/spotify-webapp/static/css/570.3bd6244a.chunk.css.map",
+    "570.5d21b4f3.chunk.js.map": "/spotify-webapp/static/js/570.5d21b4f3.chunk.js.map",
+    "327.68bc082b.chunk.js.map": "/spotify-webapp/static/js/327.68bc082b.chunk.js.map",
+    "485.3a1e80be.chunk.js.map": "/spotify-webapp/static/js/485.3a1e80be.chunk.js.map",
+    "791.6e065e91.chunk.js.map": "/spotify-webapp/static/js/791.6e065e91.chunk.js.map",
+    "415.e4b996d5.chunk.js.map": "/spotify-webapp/static/js/415.e4b996d5.chunk.js.map",
+    "695.632db14d.chunk.js.map": "/spotify-webapp/static/js/695.632db14d.chunk.js.map",
+    "602.f5bb271a.chunk.js.map": "/spotify-webapp/static/js/602.f5bb271a.chunk.js.map",
+    "437.a6343b85.chunk.css.map": "/spotify-webapp/static/css/437.a6343b85.chunk.css.map",
+    "437.a7871601.chunk.js.map": "/spotify-webapp/static/js/437.a7871601.chunk.js.map",
+    "594.b7348de9.chunk.js.map": "/spotify-webapp/static/js/594.b7348de9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d25b37f8.css",
+    "static/js/main.7b10e874.js"
+  ]
+}

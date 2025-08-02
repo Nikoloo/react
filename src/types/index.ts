@@ -114,6 +114,7 @@ export interface Device {
 export interface UIState {
   isLibraryCollapsed: boolean;
   currentTheme: 'dark' | 'light';
+  theme: 'dark' | 'light';
   isPlaying: boolean;
   volume: number;
   isShuffled: boolean;

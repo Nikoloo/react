@@ -98,12 +98,23 @@ npm run deploy     # Deploy to GitHub Pages
 ```
 
 ### Environment Setup
-Create a `.env` file in the root directory:
-```env
-REACT_APP_SPOTIFY_CLIENT_ID=your_spotify_client_id
-REACT_APP_SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
-REACT_APP_API_BASE_URL=https://api.spotify.com/v1
-```
+
+1. **Create Spotify App**:
+   - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+   - Create a new app
+   - Add redirect URIs:
+     - Development: `http://localhost:3000/callback`
+     - Production: `https://yourusername.github.io/spotify-webapp/callback`
+
+2. **Configure Environment**:
+   ```bash
+   # Copy example environment file
+   cp .env.example .env
+   
+   # Add your Spotify credentials to .env
+   REACT_APP_SPOTIFY_CLIENT_ID=your_spotify_client_id
+   REACT_APP_SPOTIFY_REDIRECT_URI=http://localhost:3000/callback
+   ```
 
 ## 📱 GitHub Pages Deployment
 

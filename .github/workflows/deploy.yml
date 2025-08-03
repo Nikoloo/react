@@ -36,6 +36,8 @@ jobs:
         CI: false
         GENERATE_SOURCEMAP: false
         PUBLIC_URL: https://nikoloo.github.io/react
+        REACT_APP_SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+        REACT_APP_SPOTIFY_REDIRECT_URI: https://nikoloo.github.io/react/#/callback
         
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'

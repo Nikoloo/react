@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkspotify_webapp=self.webpackChunkspotify_webapp||[]).push([[776],{776:(e,s,p)=>{p.r(s),p.d(s,{default:()=>c});p(950);var l=p(414);const c=()=>(0,l.jsxs)("div",{children:[(0,l.jsx)("h1",{children:"Now Playing"}),(0,l.jsx)("p",{children:"Full-screen player experience"})]})}}]);

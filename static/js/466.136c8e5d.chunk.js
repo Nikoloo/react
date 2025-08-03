@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkspotify_webapp=self.webpackChunkspotify_webapp||[]).push([[466],{466:(e,s,i)=>{i.r(s),i.d(s,{default:()=>c});i(950);var p=i(414);const c=()=>(0,p.jsxs)("div",{children:[(0,p.jsx)("h1",{children:"Search"}),(0,p.jsx)("p",{children:"Find your favorite music"})]})}}]);

@@ -2,7 +2,7 @@
   "name": "spotify-webapp",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/spotify-webapp",
+  "homepage": "https://nikoloo.github.io/react",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "react": "^18.2.0",

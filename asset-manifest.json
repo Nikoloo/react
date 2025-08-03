@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://nikoloo.github.io/react/static/css/main.ac3b71df.css",
-    "main.js": "https://nikoloo.github.io/react/static/js/main.779fa7cd.js",
+    "main.js": "https://nikoloo.github.io/react/static/js/main.bacb918a.js",
     "static/css/372.61030cf1.chunk.css": "https://nikoloo.github.io/react/static/css/372.61030cf1.chunk.css",
     "static/js/372.3f9d3247.chunk.js": "https://nikoloo.github.io/react/static/js/372.3f9d3247.chunk.js",
     "static/js/576.87faab5e.chunk.js": "https://nikoloo.github.io/react/static/js/576.87faab5e.chunk.js",
@@ -9,14 +9,14 @@
     "static/js/776.73c8b3af.chunk.js": "https://nikoloo.github.io/react/static/js/776.73c8b3af.chunk.js",
     "static/js/48.46aed339.chunk.js": "https://nikoloo.github.io/react/static/js/48.46aed339.chunk.js",
     "static/js/872.85c3e9bd.chunk.js": "https://nikoloo.github.io/react/static/js/872.85c3e9bd.chunk.js",
-    "static/js/829.1e0656b2.chunk.js": "https://nikoloo.github.io/react/static/js/829.1e0656b2.chunk.js",
+    "static/js/829.4b317053.chunk.js": "https://nikoloo.github.io/react/static/js/829.4b317053.chunk.js",
     "static/css/727.3928ca7c.chunk.css": "https://nikoloo.github.io/react/static/css/727.3928ca7c.chunk.css",
-    "static/js/727.0d8faec2.chunk.js": "https://nikoloo.github.io/react/static/js/727.0d8faec2.chunk.js",
-    "static/js/499.70ad9b2e.chunk.js": "https://nikoloo.github.io/react/static/js/499.70ad9b2e.chunk.js",
+    "static/js/727.92f1840e.chunk.js": "https://nikoloo.github.io/react/static/js/727.92f1840e.chunk.js",
+    "static/js/499.911ccfce.chunk.js": "https://nikoloo.github.io/react/static/js/499.911ccfce.chunk.js",
     "index.html": "https://nikoloo.github.io/react/index.html"
   },
   "entrypoints": [
     "static/css/main.ac3b71df.css",
-    "static/js/main.779fa7cd.js"
+    "static/js/main.bacb918a.js"
   ]
 }
